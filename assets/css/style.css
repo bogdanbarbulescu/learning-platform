@@ -1,46 +1,45 @@
+/* --- Base Styles --- */
+
 body {
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text */
+    background-color: #1A2634; /* Dark Blue background */
+    color: #FEE5B1; /* Light Beige text */
     font-family: sans-serif;
 }
 
-/* No longer needed, as offcanvas handles this */
-/* .sidebar {
-    min-height: 100vh;
-} */
+/* --- Navbar --- */
+
+.navbar-dark {
+    background-color: #1A2634 !important; /* Dark Blue, override Bootstrap */
+}
+
+/* --- Sidenav --- */
 
 .nav-link {
-    color: #e0e0e0;
+    color: #FEE5B1; /* Light Beige links */
+    display: flex; /*For the icons to be correctly displayed*/
+    align-items: center;
 }
 
-.nav-link:hover {
-    color: #ffffff; /* Slightly brighter on hover */
-    background-color: #333; /* Darker background on hover*/
+.nav-link svg{
+    margin-right: 10px; /*Add some space between the icon and the text*/
 }
+
+.nav-link:hover,
 .nav-link.active {
-    color: #ffffff;
-    font-weight: bold;
+    color: #FFCC00; /* Yellow on hover/active */
+    background-color: #203E5F; /* Medium Blue background on hover/active */
+}
+.offcanvas{
+     background-color: #1A2634; /*Set the ofcanvas background to be Dark blue*/
 }
 
-/* Basic card styling (add more later) */
-.card {
-    background-color: #222;
-    border: 1px solid #333;
-    margin: 10px;
-    padding: 15px;
-    color: #e0e0e0;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover */
-}
+/* --- Main Content --- */
 
-.card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
-}
-
-#module-content{
+#module-content {
     margin-top: 20px;
     padding: 20px;
-    border: 1px solid #333;
+    border: 1px solid #203E5F; /* Medium Blue border */
+    background-color: #1A2634; /* Consistency */
 }
 
 /* Adjust padding for smaller screens (optional, but good practice) */
@@ -48,16 +47,71 @@ body {
     #module-content {
         padding: 10px;  /* Reduce padding on small screens */
     }
-    .card {
-        width: 100%; /* Make cards full-width on small screens*/
-    }
 }
 
-/* Style for the loading indicator */
+/* --- Loading Indicator --- */
+
 #loading-indicator {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000; /* Ensure it's on top */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Use the yellow color for the spinner */
+.spinner-border {
+    color: #FFCC00 !important;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background-color: #FFCC00; /* Yellow primary button */
+    border-color: #FFCC00;
+    color: #1A2634; /* Dark Blue text on buttons for contrast */
+}
+
+.btn-primary:hover {
+    background-color: #e6b800; /* Slightly darker yellow on hover */
+    border-color: #e6b800;
+}
+
+.btn-secondary {
+    background-color: #203E5F; /* Medium Blue secondary button */
+    border-color: #203E5F;
+    color: #FEE5B1;  /* Light Beige text */
+}
+
+.btn-secondary:hover {
+    background-color: #1a3352; /* Slightly darker Medium Blue on hover */
+    border-color: #1a3352;
+}
+/* --- Jumbotron --- */
+
+.jumbotron {
+    background-color: #203E5F; /* Medium Blue background */
+    color: #FEE5B1; /* Light Beige text */
+    padding: 2rem 1rem; /* Adjust padding as needed */
+    margin-bottom: 2rem; /* Adjust margin as needed */
+    border-radius: 0.3rem; /* Optional: Add rounded corners */
+}
+.jumbotron hr{
+    border-top-color: #FEE5B1; /*Change hr color*/
+}
+
+/* --- Module Navigation ---*/
+.module-nav{
+    display: flex;
+    gap: 10px; /*Add space between button and select*/
+}
+
+.form-select {
+    background-color: #203E5F;
+    color: #FFCC00;
+    border-color: #FFCC00;
+}
+
+.form-select option {
+    background-color: #203E5F;
+    color: #FFCC00;
 }
