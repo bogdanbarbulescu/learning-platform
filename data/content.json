@@ -17,8 +17,29 @@
             "id": "tcp-ip",
             "title": "TCP/IP Protocol Suite",
             "description": "Understanding the core protocols of the internet.",
-            "contentType": "html",
-            "contentSrc": "<p>Content for <strong>TCP/IP</strong> module.  Include details about layers, addressing, etc.</p>"
+            "contentType": "markdown",
+            "contentSrc": "data/modules/tcp-ip.md"
+          },
+          {
+            "id": "f5",
+            "title": "F5 Load Balancing",
+            "description": "Introduction to F5 load balancing concepts.",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/f5.md"
+          },
+          {
+            "id": "waf",
+            "title": "Web Application Firewall (WAF)",
+            "description": "Understanding WAFs and their role in security.",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/waf.md"
+          },
+          {
+             "id": "locked-shields-2024",
+            "title": "Locked Shields 2024",
+            "description": "Introduction to Locked Shields exercise",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/locked-shields-2024.md"
           }
         ]
       },
@@ -28,28 +49,42 @@
         "description": "Learn about DevOps.",
         "image": "assets/img/devops-practices.jpg",
         "modules": [
-            {
-                "id": "devops-intro",
-                "title": "DevOps Intro",
-                "description": "Intro to DevOps",
-                "contentType": "markdown",
-                "contentSrc": "data/modules/devops-intro.md"
-            }
+          {
+            "id": "devops-intro",
+            "title": "DevOps Intro",
+            "description": "Intro to DevOps",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/devops-intro.md"
+          },
+           {
+            "id": "cheatsheets",
+            "title": "Cheatsheets",
+            "description": "Useful cheatsheets",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/cheatsheets.md"
+          }
         ]
       },
-       {
+      {
         "id": "programming-concepts",
         "title": "Programming Concepts",
         "description": "Learn about Programming.",
         "image": "assets/img/programming-concepts.jpg",
-         "modules": [
-            {
-                "id": "programming-intro",
-                "title": "Programming Intro",
-                "description": "Intro to Programming",
-                "contentType": "markdown",
-                "contentSrc": "data/modules/programming-intro.md"
-            }
+        "modules": [
+          {
+            "id": "programming-intro",
+            "title": "Programming Intro",
+            "description": "Intro to Programming",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/programming-intro.md"
+          },
+          {
+            "id": "python",
+            "title": "Python",
+            "description": "Intro to Python",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/python.md"
+          }
         ]
       },
       {
@@ -57,14 +92,35 @@
         "title": "AI Basics",
         "description": "Learn about AI.",
         "image": "assets/img/ai-basics.jpg",
-         "modules": [
-            {
-                "id": "ai-intro",
-                "title": "AI Intro",
-                "description": "Intro to AI",
-                 "contentType": "markdown",
-                "contentSrc": "data/modules/ai-intro.md"
-            }
+        "modules": [
+          {
+            "id": "ai-intro",
+            "title": "AI Intro",
+            "description": "Intro to AI",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/ai-intro.md"
+          },
+          {
+            "id": "langchain",
+            "title": "LangChain",
+            "description": "Intro to LangChain",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/LangChain.md"
+          },
+          {
+            "id": "ca",
+            "title": "Cloud Architect",
+            "description": "Introduction to being a Cloud Architect",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/ca.md"
+          },
+          {
+            "id": "motivational-books",
+            "title": "Motivational Books",
+            "description": "List of Motivational Books",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/motivational-books.md"
+          }
         ]
       }
     ]
