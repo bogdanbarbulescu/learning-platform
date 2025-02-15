@@ -37,7 +37,9 @@ body {
 
 #module-content {
     margin-top: 20px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 20px; /* All-around padding */
+    padding-top: 20px;  /* Explicit top padding */
     border: 1px solid #203E5F; /* Medium Blue border */
     background-color: #1A2634; /* Consistency */
 }
@@ -46,6 +48,10 @@ body {
 @media (max-width: 767.98px) { /* Bootstrap's breakpoint for small screens */
     #module-content {
         padding: 10px;  /* Reduce padding on small screens */
+    }
+     /* Prevent Offcanvas Overlap */
+    .offcanvas.show ~ .main-content {
+        /*Don't move the content*/
     }
 }
 
@@ -113,5 +119,8 @@ body {
 
 .form-select option {
     background-color: #203E5F;
+    color: #FFCC00;
+}
+.sidebar-heading {
     color: #FFCC00;
 }
