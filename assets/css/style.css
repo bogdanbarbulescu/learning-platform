@@ -3,55 +3,65 @@
 body {
     background-color: #1A2634; /* Dark Blue background */
     color: #FEE5B1; /* Light Beige text */
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 /* --- Navbar --- */
 
 .navbar-dark {
     background-color: #1A2634 !important; /* Dark Blue, override Bootstrap */
+    padding: 10px 20px;
 }
 
 /* --- Sidenav --- */
 
 .nav-link {
     color: #FEE5B1; /* Light Beige links */
-    display: flex; /*For the icons to be correctly displayed*/
+    display: flex;
     align-items: center;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
-.nav-link svg{
-    margin-right: 10px; /*Add some space between the icon and the text*/
+.nav-link svg {
+    margin-right: 10px;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #FFCC00; /* Yellow on hover/active */
-    background-color: #203E5F; /* Medium Blue background on hover/active */
+    color: #FFCC00;
+    background-color: #203E5F;
 }
-.offcanvas{
-     background-color: #1A2634; /*Set the ofcanvas background to be Dark blue*/
+
+.offcanvas {
+    background-color: #1A2634;
 }
 
 /* --- Main Content --- */
 
 #module-content {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px; /* All-around padding */
-    padding-top: 20px;  /* Explicit top padding */
-    border: 1px solid #203E5F; /* Medium Blue border */
-    background-color: #1A2634; /* Consistency */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #203E5F;
+    background-color: #1A2634;
+    border-radius: 8px;
 }
 
-/* Adjust padding for smaller screens (optional, but good practice) */
-@media (max-width: 767.98px) { /* Bootstrap's breakpoint for small screens */
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
     #module-content {
-        padding: 10px;  /* Reduce padding on small screens */
+        padding: 15px;
     }
-     /* Prevent Offcanvas Overlap */
-    .offcanvas.show ~ .main-content {
-        /*Don't move the content*/
+    .module-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .offcanvas {
+        width: 75%;
     }
 }
 
@@ -65,58 +75,73 @@ body {
     z-index: 1000;
 }
 
-/* Use the yellow color for the spinner */
 .spinner-border {
     color: #FFCC00 !important;
 }
 
 /* --- Buttons --- */
+
 .btn-primary {
-    background-color: #FFCC00; /* Yellow primary button */
+    background-color: #FFCC00;
     border-color: #FFCC00;
-    color: #1A2634; /* Dark Blue text on buttons for contrast */
+    color: #1A2634;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: #e6b800; /* Slightly darker yellow on hover */
+    background-color: #e6b800;
     border-color: #e6b800;
 }
 
 .btn-secondary {
-    background-color: #203E5F; /* Medium Blue secondary button */
+    background-color: #203E5F;
     border-color: #203E5F;
-    color: #FEE5B1;  /* Light Beige text */
+    color: #FEE5B1;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-secondary:hover {
-    background-color: #1a3352; /* Slightly darker Medium Blue on hover */
+    background-color: #1a3352;
     border-color: #1a3352;
 }
 
 /* --- Module Navigation ---*/
-.module-nav{
+
+.module-nav {
     display: flex;
-    gap: 10px; /*Add space between button and select*/
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .form-select {
     background-color: #203E5F;
     color: #FFCC00;
     border-color: #FFCC00;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .form-select option {
     background-color: #203E5F;
     color: #FFCC00;
 }
+
 .sidebar-heading {
     color: #FFCC00;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* --- Hero Image --- */
+
 .bg-image {
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Don't repeat the image */
-    color: white; /* Set text color to white for readability */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #EEEEEE;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
 }
