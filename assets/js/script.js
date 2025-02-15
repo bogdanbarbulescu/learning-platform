@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const dashboard = document.getElementById('dashboard');
             const moduleContentDiv = document.getElementById('module-content');
             const loadingIndicator = document.getElementById('loading-indicator');
+            const sidenavLinksContainer = document.getElementById('sidenav-links'); // Get the ul
 
             // --- Helper Functions ---
 
@@ -41,113 +42,69 @@ document.addEventListener('DOMContentLoaded', function() {
                             loadingIndicator.style.display = 'none';
                         });
                 } else if (module.contentType === 'html') {
+                    //  This should no longer happen, but it's good to have it for safety.
                     moduleContentDiv.innerHTML += module.contentSrc;
                 }
             }
 
+            // --- Populate Sidenav with MODULES ---
+            function populateSidenav(learningPaths) {
+                sidenavLinksContainer.innerHTML = ''; // Clear any existing links
 
-            // Display all modules within a learning path, with navigation
-            function displayModules(modules) {
-                moduleContentDiv.innerHTML = ''; // Clear previous content
+                learningPaths.forEach(path => {
+                    // Add a heading for the learning path
+                    const pathHeading = document.createElement('h6');
+                    pathHeading.classList.add('sidebar-heading', 'd-flex', 'justify-content-between', 'align-items-center', 'px-3', 'mt-4', 'mb-1', 'text-muted');
+                    pathHeading.textContent = path.title;
+                    sidenavLinksContainer.appendChild(pathHeading);
 
-                // Create a container for module navigation
-                const moduleNav = document.createElement('div');
-                moduleNav.classList.add('module-nav', 'mb-3'); // Add some margin-bottom
 
-				// Create "Previous" Button.
-                const prevButton = document.createElement('button');
-                prevButton.classList.add('btn', 'btn-secondary', 'me-2');
-                prevButton.textContent = 'Previous';
-                prevButton.disabled = true; // Initially disabled
+                    path.modules.forEach(module => { // Iterate through MODULES
+                        const listItem = document.createElement('li');
+                        listItem.classList.add('nav-item');
 
-				// Create "Next" Button.
-                const nextButton = document.createElement('button');
-                nextButton.classList.add('btn', 'btn-primary');
-                nextButton.textContent = 'Next';
+                        const link = document.createElement('a');
+                        link.classList.add('nav-link');
+                        link.href = '#';
+                        link.setAttribute('data-module-id', module.id); // Use module ID
+                        link.textContent = module.title; // Module title
 
-				//Create Module List
-                const moduleList = document.createElement('select');
-                moduleList.classList.add('form-select'); //Bootstrap class for select.
+                        listItem.appendChild(link);
+                        sidenavLinksContainer.appendChild(listItem);
 
-                modules.forEach((module, index) => {
-                     const option = document.createElement('option');
-                     option.value = index;
-                     option.textContent = module.title;
-                     moduleList.appendChild(option);
+                        // --- Event Listener for Module Links ---
+                        link.addEventListener('click', function(event) {
+                            event.preventDefault();
+
+                            // Remove active class from all links
+                            const allLinks = document.querySelectorAll('#sidenav-links .nav-link');
+                            allLinks.forEach(l => l.classList.remove('active'));
+
+                            // Add active class to the clicked link
+                            this.classList.add('active');
+
+                            // Display the clicked module directly
+                            displayModule(module);
+
+
+                            // Close the offcanvas (for mobile)
+                            const offcanvas = document.getElementById('sidebar');
+                            const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+                            if (bsOffcanvas) {
+                                bsOffcanvas.hide();
+                            }
+                        });
+                    });
                 });
-
-                // Add event listeners for navigation
-                let currentModuleIndex = 0;
-
-                function updateModuleDisplay() {
-                    displayModule(modules[currentModuleIndex]);
-                    // Update button states
-                    prevButton.disabled = currentModuleIndex === 0;
-                    nextButton.disabled = currentModuleIndex === modules.length - 1;
-                    //Update selected option in the dropdown
-                    moduleList.value = currentModuleIndex;
-                }
-
-                prevButton.addEventListener('click', () => {
-                    if (currentModuleIndex > 0) {
-                        currentModuleIndex--;
-                        updateModuleDisplay();
-                    }
-                });
-
-                nextButton.addEventListener('click', () => {
-                    if (currentModuleIndex < modules.length - 1) {
-                        currentModuleIndex++;
-                        updateModuleDisplay();
-                    }
-                });
-
-                moduleList.addEventListener('change', () => {
-                    currentModuleIndex = parseInt(moduleList.value);
-                    updateModuleDisplay();
-                })
-
-                // Add buttons to the navigation container
-                moduleNav.appendChild(prevButton);
-                moduleNav.appendChild(nextButton);
-                moduleNav.appendChild(moduleList);
-                moduleContentDiv.appendChild(moduleNav);
-
-                // Initially display the first module
-                updateModuleDisplay();
             }
 
-            // --- Event Listeners ---
 
-            // Sidenav event listener
-            const sidenavLinks = document.querySelectorAll('#sidebar .nav-link');
-            sidenavLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
+            // --- Initial Setup ---
+            populateSidenav(data.learningPaths); // Populate sidenav on load
 
-                    // Remove active class from all links
-                    sidenavLinks.forEach(l => l.classList.remove('active'));
-                    // Add active class to the clicked link
-                    this.classList.add('active');
-
-                    const pathId = this.getAttribute('data-path');
-                    const selectedPath = data.learningPaths.find(path => path.id === pathId);
-
-                    if (selectedPath) {
-                        displayModules(selectedPath.modules);
-                    }
-
-                    // Close the offcanvas after clicking a link (for mobile)
-                    const offcanvas = document.getElementById('sidebar');
-                    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
-                    if (bsOffcanvas) {
-                        bsOffcanvas.hide();
-                    }
-                });
-            });
         })
         .catch(error => {
             console.error('Error fetching or parsing data:', error);
-            document.getElementById('dashboard').innerHTML = '<p>Error loading content.</p>'; //Keep error message.
+            document.getElementById('dashboard').innerHTML = '<p>Error loading content.</p>';
         });
 });
