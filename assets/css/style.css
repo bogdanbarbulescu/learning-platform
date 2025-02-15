@@ -92,18 +92,6 @@ body {
     background-color: #1a3352; /* Slightly darker Medium Blue on hover */
     border-color: #1a3352;
 }
-/* --- Jumbotron --- */
-
-.jumbotron {
-    background-color: #203E5F; /* Medium Blue background */
-    color: #FEE5B1; /* Light Beige text */
-    padding: 2rem 1rem; /* Adjust padding as needed */
-    margin-bottom: 2rem; /* Adjust margin as needed */
-    border-radius: 0.3rem; /* Optional: Add rounded corners */
-}
-.jumbotron hr{
-    border-top-color: #FEE5B1; /*Change hr color*/
-}
 
 /* --- Module Navigation ---*/
 .module-nav{
@@ -123,4 +111,12 @@ body {
 }
 .sidebar-heading {
     color: #FFCC00;
+}
+
+/* --- Hero Image --- */
+.bg-image {
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    color: white; /* Set text color to white for readability */
 }
