@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Learning Platform</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Markdown-it (Keep this if you implemented Markdown) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <span class="material-icons-outlined">menu</span>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidenav -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        <span class="material-icons-outlined">book</span> Learning Area
+                    </div>
+                    <span class="material-icons-outlined close-icon" onclick="toggleSidebar()">close</span>
+                </div>
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="sidebar-list-item">
+                            <a class="nav-link active" href="#" data-path="network-fundamentals">
+                                <span class="material-icons-outlined">router</span> Network Fundamentals
+                            </a>
+                        </li>
+                        <li class="sidebar-list-item">
+                            <a class="nav-link" href="#" data-path="devops-practices">
+                                <span class="material-icons-outlined">cloud_queue</span> DevOps Practices
+                            </a>
+                        </li>
+                        <li class="sidebar-list-item">
+                            <a class="nav-link" href="#" data-path="programming-concepts">
+                                <span class="material-icons-outlined">code</span> Programming Concepts
+                            </a>
+                        </li>
+                        <li class="sidebar-list-item">
+                            <a class="nav-link" href="#" data-path="ai-basics">
+                                <span class="material-icons-outlined">smart_toy</span> AI Basics
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-container">
+                <!-- Module Content -->
+                <div id="module-content">
+                    <!-- Module content will be displayed here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

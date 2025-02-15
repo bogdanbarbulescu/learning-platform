@@ -1,0 +1,71 @@
+{
+    "learningPaths": [
+      {
+        "id": "network-fundamentals",
+        "title": "Network Fundamentals",
+        "description": "A basic intro to networking.",
+        "image": "assets/img/network-fundamentals.jpg",
+        "modules": [
+          {
+            "id": "network-basics",
+            "title": "Network Basics",
+            "description": "Intro to networks.",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/network-basics.md"
+          },
+          {
+            "id": "tcp-ip",
+            "title": "TCP/IP Protocol Suite",
+            "description": "Understanding the core protocols of the internet.",
+            "contentType": "html",
+            "contentSrc": "<p>Content for <strong>TCP/IP</strong> module.  Include details about layers, addressing, etc.</p>"
+          }
+        ]
+      },
+      {
+        "id": "devops-practices",
+        "title": "DevOps Practices",
+        "description": "Learn about DevOps.",
+        "image": "assets/img/devops-practices.jpg",
+        "modules": [
+            {
+                "id": "devops-intro",
+                "title": "DevOps Intro",
+                "description": "Intro to DevOps",
+                "contentType": "markdown",
+                "contentSrc": "data/modules/devops-intro.md"
+            }
+        ]
+      },
+       {
+        "id": "programming-concepts",
+        "title": "Programming Concepts",
+        "description": "Learn about Programming.",
+        "image": "assets/img/programming-concepts.jpg",
+         "modules": [
+            {
+                "id": "programming-intro",
+                "title": "Programming Intro",
+                "description": "Intro to Programming",
+                "contentType": "markdown",
+                "contentSrc": "data/modules/programming-intro.md"
+            }
+        ]
+      },
+      {
+        "id": "ai-basics",
+        "title": "AI Basics",
+        "description": "Learn about AI.",
+        "image": "assets/img/ai-basics.jpg",
+         "modules": [
+            {
+                "id": "ai-intro",
+                "title": "AI Intro",
+                "description": "Intro to AI",
+                 "contentType": "markdown",
+                "contentSrc": "data/modules/ai-intro.md"
+            }
+        ]
+      }
+    ]
+  }
