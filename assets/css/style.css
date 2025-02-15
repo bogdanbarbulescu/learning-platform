@@ -1,164 +1,63 @@
-/* Global Styles */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #1d2634;
-    color: #9e9ea4;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    font-family: sans-serif;
 }
 
-.material-icons-outlined {
-    vertical-align: middle;
-    line-height: 1px;
-    font-size: 20px; /* Adjust as needed */
-}
-
-.close-icon {
-    display: none; /* Hidden by default */
-}
-
-/* Sidebar */
-.sidebar {
+/* No longer needed, as offcanvas handles this */
+/* .sidebar {
     min-height: 100vh;
-    background-color: #263043;
-    overflow-y: auto;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    width: 260px; /* Default width for larger screens */
-}
-
-.sidebar-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-
-.sidebar-brand {
-    margin-top: 15px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.sidebar-list {
-    padding: 0;
-    list-style-type: none;
-}
-
-.sidebar-list-item:first-child {
-    margin-top: 15px;
-}
-
-.sidebar-list-item {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-left: 3px solid transparent;
-}
-
-.sidebar-list-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-}
+} */
 
 .nav-link {
-    display: flex;
-    align-items: center;
-    color: #9e9ea4;
-    text-decoration: none;
+    color: #e0e0e0;
 }
 
-.nav-link > span {
-    margin-right: 10px;
+.nav-link:hover {
+    color: #ffffff; /* Slightly brighter on hover */
+    background-color: #333; /* Darker background on hover*/
 }
-
-.nav-link:hover,
 .nav-link.active {
-    color: #fff;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-/* Active Link Indicator */
-.sidebar-list-item.active,
-.sidebar-list-item:has(.nav-link.active) {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-left-color: #f0f; /* Magenta */
+/* Basic card styling (add more later) */
+.card {
+    background-color: #222;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 15px;
+    color: #e0e0e0;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover */
 }
 
-/* Main Content */
-.main-container {
-    padding: 20px;
-    color: rgba(255, 255, 255, 0.95);
-    transition: margin-left 0.5s ease-in-out; /* Smooth transition for main content */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
 }
 
-
-/* Module Content */
-#module-content {
+#module-content{
     margin-top: 20px;
     padding: 20px;
     border: 1px solid #333;
-    background-color: #263043;
-    border-radius: 5px;
-    color: #fff;
 }
 
-/* Menu Icon Styles */
-.menu-icon {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 1001;
-    color: white;
-}
-
-/* Media Queries */
-
-/* Extra small devices (phones, less than 576px) */
-/* No media query needed for extra small, as it's the default */
-
-/* Small devices (phones, 576px and up) */
-@media (min-width: 576px) {
-    /* Add styles for small devices here if needed */
-      .main-container{
-          margin-left: 0;
+/* Adjust padding for smaller screens (optional, but good practice) */
+@media (max-width: 767.98px) { /* Bootstrap's breakpoint for small screens */
+    #module-content {
+        padding: 10px;  /* Reduce padding on small screens */
+    }
+    .card {
+        width: 100%; /* Make cards full-width on small screens*/
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .sidebar {
-        position: fixed; /* Fixed position */
-        left: 0; /* Visible by default */
-        width: 260px; /* Set the fixed width */
-    }
-
-    .close-icon {
-        display: inline; /* Show close icon */
-    }
-
-    .menu-icon {
-        display: none; /* Hide menu icon */
-    }
-
-     .main-container{
-          margin-left: 260px; /* Make space for the sidebar */
-    }
-    .sidebar.active {
-      left: -260px;
-    }
-
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  /* Add styles for larger screens here if needed. */
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-     /* Add styles for extra-large screens here if needed. */
+/* Style for the loading indicator */
+#loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it's on top */
 }
