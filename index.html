@@ -58,15 +58,46 @@
             </nav>
 
             <!-- Main Content Area -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="padding-top: 60px;">
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content" style="padding-top: 60px;">
                 <div id="dashboard">
-                    <!-- Welcome Message and/or Introductory Content -->
-                    <div class="jumbotron">
-                        <h1 class="display-4">Welcome to the IT Learning Platform!</h1>
-                        <p class="lead">Explore a variety of intermediate-level IT topics.</p>
-                        <hr class="my-4">
-                        <p>Select a learning path from the sidebar to get started.</p>
+                    <!-- Hero Section -->
+                    <div class="px-4 py-5 my-5 text-center bg-image" style="background-image: url('assets/img/hero-image.jpg');">
+                        <h1 class="display-5 fw-bold text-light">Level Up Your IT Skills</h1>
+                        <div class="col-lg-6 mx-auto">
+                          <p class="lead mb-4 text-light">Master intermediate IT concepts with our interactive learning platform.</p>
+                          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <a href="#" class="btn btn-primary btn-lg px-4 gap-3" onclick="document.querySelector('#sidebar [data-path]').click(); return false;">Explore Learning Paths</a>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Cards (Optional) -->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                      <div class="col">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h5 class="card-title">Interactive Modules</h5>
+                            <p class="card-text">Engage with hands-on exercises and real-world examples.</p>
+                          </div>
+                        </div>
                       </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h5 class="card-title">Up-to-Date Content</h5>
+                            <p class="card-text">Stay current with the latest industry trends and technologies.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h5 class="card-title">Flexible Learning</h5>
+                            <p class="card-text">Learn at your own pace, anytime, anywhere.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
                 <div id="module-content">
                     <!-- Module Content Goes Here -->
