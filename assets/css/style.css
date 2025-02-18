@@ -1,4 +1,4 @@
-/* --- Base Styles --- */
+/* --- Base Styles (Mobile First) --- */
 
 body {
     background-color: #1A2634;
@@ -28,13 +28,6 @@ body {
     word-wrap: break-word;
 }
 
-/* Responsive adjustments for VERY long words */
-@media (max-width: 575.98px) {
-   .nav-link {
-      font-size: 0.9rem;
-   }
-}
-
 .nav-link svg {
     margin-right: 10px;
 }
@@ -53,13 +46,11 @@ body {
 .sidebar {
     max-width: 250px;
     width: 100%;
-    /* REMOVE min-height: 100vh; */
 }
 
-/* --- Sidebar Scrolling Fix --- */
+/* --- Sidebar Scrolling --- */
 .offcanvas-body {
-    overflow-y: auto; /* Enable vertical scrolling - ESSENTIAL */
-    /* REMOVE position: relative; */
+    overflow-y: auto;
 }
 
 /* --- Main Content --- */
@@ -72,6 +63,7 @@ body {
     border-radius: 8px;
     text-align: center;
 }
+
 /* Main Content Centering */
 .main-content {
     max-width: 1100px;
@@ -82,25 +74,10 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Feature cards centering (when sidebar closed) */
+/* Feature cards centering */
 .feature-cards-container {
-     display: flex;
+    display: flex;
     justify-content: center;
-
-}
-
-/* Responsive Adjustments */
-@media (max-width: 767.98px) {
-    #module-content {
-        padding: 15px;
-    }
-    .module-nav {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .offcanvas {
-        width: 75%;
-    }
 }
 
 /* --- Loading Indicator --- */
@@ -183,9 +160,85 @@ body {
     text-align: center;
     border-radius: 8px;
 }
+
 /* Responsive Code Blocks */
 pre {
     overflow-x: auto;
     word-wrap: break-word;
     white-space: pre-wrap;
+}
+
+/* --- Media Queries --- */
+
+/* Small devices (phones, <576px) */
+/*  (No specific styles needed here, as base styles apply) */
+
+/* Small devices (phones, <768px) - Bootstrap's "sm" breakpoint */
+@media (max-width: 767.98px) {
+      #module-content {
+        padding: 15px;
+    }
+    .module-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .offcanvas {
+        width: 75%;
+    }
+    /* Responsive adjustments for VERY long words */
+    .nav-link {
+      font-size: 0.9rem;
+   }
+}
+
+/* Medium devices (tablets, 768px and up) - Bootstrap's "md" breakpoint */
+@media only screen and (min-width: 768px) {
+    /* styles for browsers larger than 768px; */
+    /*  (Potentially add styles here if needed) */
+}
+
+/* Large devices (desktops, 992px and up) - Bootstrap's "lg" breakpoint */
+@media only screen and (min-width: 992px) {
+    /* styles for browsers larger than 992px; */
+     /*  (Potentially add styles here if needed) */
+}
+
+/* Extra large devices (large desktops, 1200px and up) - Bootstrap's "xl" breakpoint */
+@media only screen and (min-width: 1200px) {
+    /* styles for browsers larger than 1200px */
+    /*  (Potentially add styles here if needed) */
+}
+
+/* Extra extra large devices (large desktops, 1400px and up) - Bootstrap's "xxl" breakpoint */
+ @media only screen and (min-width: 1400px) {
+    /* styles for browsers larger than 1400px; */
+     /*  (Potentially add styles here if needed) */
+
+}
+/* Extra, extra, extra large devices (large desktops, 2000px and up) */
+@media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens */
+}
+
+/* --- Device-Specific Media Queries (Use with Caution!) --- */
+
+/*  These are less reliable than width-based queries. */
+
+@media only screen and (max-device-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    /* (Consider if you *really* need this, as width-based queries are better) */
+}
+
+@media only screen and (device-width: 768px) {
+    /* default iPad screens */
+    /* (Consider if you *really* need this) */
+}
+
+/* Portrait and Landscape for iPad (and similar tablets) */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
 }
