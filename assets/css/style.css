@@ -63,8 +63,8 @@ body {
 /* --- Main Content --- */
 
 #module-content {
-    margin: 10px;
-    padding: 20px;
+    margin: 5px;
+    padding: 10px;
     border: 1px solid #203E5F;
     background-color: #1A2634;
     border-radius: 8px;
@@ -78,9 +78,9 @@ body {
 .main-content {
     max-width: 1100px;
     margin: 0 auto;
-    padding-top: 60px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-top: 50px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: #f8f9fa;
 }
 
