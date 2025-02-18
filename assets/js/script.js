@@ -49,47 +49,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
 
-            // --- Populate Sidenav with MODULES ---
+           // --- Populate Sidenav with Learning Paths and Modules ---
             function populateSidenav(learningPaths) {
-                sidenavLinksContainer.innerHTML = ''; // Clear any existing links
+                sidenavLinksContainer.innerHTML = ''; // Clear existing links
 
                 learningPaths.forEach(path => {
-                    // Add a heading for the learning path
+                    // Create a heading for the Learning Path
                     const pathHeading = document.createElement('h6');
-                    pathHeading.classList.add('sidebar-heading', 'd-flex', 'justify-content-between', 'align-items-center', 'px-3', 'mt-4', 'mb-1', 'text-muted');
                     pathHeading.textContent = path.title;
+                    pathHeading.classList.add('sidebar-heading'); // Add a class for styling
                     sidenavLinksContainer.appendChild(pathHeading);
 
-
-                    path.modules.forEach(module => { // Iterate through MODULES
+                    // Now, create the module links *within* this learning path
+                    path.modules.forEach(module => {
                         const listItem = document.createElement('li');
                         listItem.classList.add('nav-item');
 
                         const link = document.createElement('a');
                         link.classList.add('nav-link');
                         link.href = '#';
-                        link.setAttribute('data-module-id', module.id); // Use module ID
-                        link.textContent = module.title; // Module title
+                        link.setAttribute('data-module-id', module.id);
+                        link.textContent = module.title;
 
                         listItem.appendChild(link);
                         sidenavLinksContainer.appendChild(listItem);
 
-                        // --- Event Listener for Module Links ---
                         link.addEventListener('click', function(event) {
                             event.preventDefault();
-
-                            // Remove active class from all links
                             const allLinks = document.querySelectorAll('#sidenav-links .nav-link');
                             allLinks.forEach(l => l.classList.remove('active'));
-
-                            // Add active class to the clicked link
                             this.classList.add('active');
-
-                            // Display the clicked module directly
                             displayModule(module);
 
-
-                            // Close the offcanvas (for mobile)
                             const offcanvas = document.getElementById('sidebar');
                             const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
                             if (bsOffcanvas) {
