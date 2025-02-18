@@ -33,6 +33,24 @@
             color: #FFCC00;
             /*Yellow*/
         }
+
+        /* Additional Custom Styles (Optional) */
+        .sidebar {
+            min-height: 100vh; /* Ensure sidebar takes full height */
+        }
+        .main-content {
+            background-color: #f8f9fa; /* Light background for main content */
+        }
+        .bg-image {
+            background-size: cover;
+            background-position: center;
+        }
+         /* Responsive Code Blocks */
+        pre {
+            overflow-x: auto; /* Add horizontal scrolling for overflow */
+            word-wrap: break-word; /* Wrap long lines */
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
     </style>
 </head>
 
@@ -71,15 +89,16 @@
                 <div id="dashboard">
                     <!-- Hero Section -->
                     <div class="px-4 py-5 my-5 text-center bg-image"
-                        style="background-image: url('assets/img/hero-image.jpg');">
-                        <h1 class="display-5 fw-bold text-light">Level Up Your IT Skills</h1>
+                        style="background-image: url('assets/img/hero-image.jpg'); background-color: #203E5F; color: #f8f9fa;">
+                        <h1 class="display-5 fw-bold">Level Up Your IT Skills</h1>
                         <div class="col-lg-6 mx-auto">
-                            <p class="lead mb-4 text-light">Master intermediate IT concepts with our interactive
+                            <p class="lead mb-4">Master intermediate IT concepts with our interactive
                                 learning platform.</p>
                             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                                <a href="#" class="btn btn-primary btn-lg px-4 gap-3"
-                                    onclick="document.querySelector('#sidebar [data-path]').click(); return false;">Explore
-                                    Learning Paths</a>
+                                <!-- SIMPLIFIED BUTTON -->
+                                <button type="button" class="btn btn-primary btn-lg px-4 gap-3" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+                                    Explore Learning Paths
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -116,7 +135,7 @@
                 <div id="module-content">
                     <!-- Module Content Goes Here -->
                 </div>
-                <div id="loading-indicator" style="display: none;">
+                <div id="loading-indicator" style="display: none; justify-content: center; align-items: center; padding: 20px;">
                     <div class="spinner-border text-light" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
