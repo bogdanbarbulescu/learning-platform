@@ -25,16 +25,15 @@ body {
     padding: 10px 15px;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
-    word-wrap: break-word; /* Allow long words to wrap */
+    word-wrap: break-word;
 }
 
-/* Responsive adjustments for VERY long words (rare, but good to handle) */
-@media (max-width: 575.98px) { /* Bootstrap's "sm" breakpoint */
+/* Responsive adjustments for VERY long words */
+@media (max-width: 575.98px) {
    .nav-link {
-      font-size: 0.9rem; /*Reduce a little the font-size*/
+      font-size: 0.9rem;
    }
 }
-
 
 .nav-link svg {
     margin-right: 10px;
@@ -54,15 +53,14 @@ body {
 .sidebar {
     max-width: 250px;
     width: 100%;
-    min-height: 100vh;
+    /* REMOVE min-height: 100vh; */
 }
 
 /* --- Sidebar Scrolling Fix --- */
 .offcanvas-body {
-    overflow-y: auto; /* Enable vertical scrolling */
-    position: relative; /* Needed for sticky positioning to work */
+    overflow-y: auto; /* Enable vertical scrolling - ESSENTIAL */
+    /* REMOVE position: relative; */
 }
-
 
 /* --- Main Content --- */
 
