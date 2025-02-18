@@ -1,8 +1,8 @@
 /* --- Base Styles --- */
 
 body {
-    background-color: #1A2634; /* Dark Blue background */
-    color: #FEE5B1; /* Light Beige text */
+    background-color: #1A2634;
+    color: #FEE5B1;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,20 +12,29 @@ body {
 /* --- Navbar --- */
 
 .navbar-dark {
-    background-color: #1A2634 !important; /* Dark Blue, override Bootstrap */
+    background-color: #1A2634 !important;
     padding: 10px 20px;
 }
 
 /* --- Sidenav --- */
 
 .nav-link {
-    color: #FEE5B1; /* Light Beige links */
+    color: #FEE5B1;
     display: flex;
     align-items: center;
     padding: 10px 15px;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
+    word-wrap: break-word; /* Allow long words to wrap */
 }
+
+/* Responsive adjustments for VERY long words (rare, but good to handle) */
+@media (max-width: 575.98px) { /* Bootstrap's "sm" breakpoint */
+   .nav-link {
+      font-size: 0.9rem; /*Reduce a little the font-size*/
+   }
+}
+
 
 .nav-link svg {
     margin-right: 10px;
@@ -43,10 +52,17 @@ body {
 
 /* --- Sidebar Width Control --- */
 .sidebar {
-    max-width: 250px; /* Limit sidebar width on larger screens */
-    width: 100%; /* Allow it to take full width on smaller screens */
-    min-height: 100vh; /* Ensure full height */
+    max-width: 250px;
+    width: 100%;
+    min-height: 100vh;
 }
+
+/* --- Sidebar Scrolling Fix --- */
+.offcanvas-body {
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative; /* Needed for sticky positioning to work */
+}
+
 
 /* --- Main Content --- */
 
@@ -56,24 +72,22 @@ body {
     border: 1px solid #203E5F;
     background-color: #1A2634;
     border-radius: 8px;
-    text-align: center; /* Center text content */
-
+    text-align: center;
 }
 /* Main Content Centering */
 .main-content {
-    max-width: 1100px; /* Or whatever width you prefer */
-    margin: 0 auto;   /* Center the main content horizontally */
-    padding-top: 60px; /*  Keep the padding-top for navbar */
-    padding-left: 2rem; /*Consistent padding*/
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 2rem;
     padding-right: 2rem;
     background-color: #f8f9fa;
 }
 
 /* Feature cards centering (when sidebar closed) */
 .feature-cards-container {
-    display: flex;
-    justify-content: center; /* Center cards horizontally */
-    background-color: #f8f9fa;
+     display: flex;
+    justify-content: center;
 
 }
 
@@ -173,7 +187,7 @@ body {
 }
 /* Responsive Code Blocks */
 pre {
-    overflow-x: auto; /* Add horizontal scrolling for overflow */
-    word-wrap: break-word; /* Wrap long lines */
-    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+    overflow-x: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
