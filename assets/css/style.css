@@ -90,6 +90,17 @@ body {
     justify-content: center;
 }
 
+/* ... (Your existing CSS) ... */
+
+/* Responsive Images */
+.article-body img {
+    max-width: 100%; /*  Make images responsive */
+    height: auto;     /*  Maintain aspect ratio */
+    display: block;    /*  Treat as block-level for centering, etc. */
+    margin-left: auto;  /* Center images horizontally */
+    margin-right: auto;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
     #module-content {
