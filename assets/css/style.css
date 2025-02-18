@@ -71,8 +71,9 @@ body {
 
 /* Feature cards centering (when sidebar closed) */
 .feature-cards-container {
-     display: flex;
+    display: flex;
     justify-content: center; /* Center cards horizontally */
+    background-color: #f8f9fa;
 
 }
 
