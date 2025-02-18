@@ -49,9 +49,28 @@ body {
     border: 1px solid #203E5F;
     background-color: #1A2634;
     border-radius: 8px;
+    /*  Centering when sidebar is closed (mobile) */
+    text-align: center; /* Center text content */
+}
+
+/* Feature cards centering (when sidebar closed) */
+.feature-cards-container {
+     display: flex;
+    justify-content: center; /* Center cards horizontally */
+
 }
 
 /* Responsive Adjustments */
+/* Keep existing responsive styles, AND ADD THIS: */
+@media (min-width: 768px) { /* md breakpoint and up */
+    #module-content {
+        text-align: left; /* Left-align text on larger screens */
+    }
+   .feature-cards-container{
+        justify-content: start;
+   }
+}
+
 @media (max-width: 767.98px) {
     #module-content {
         padding: 15px;
