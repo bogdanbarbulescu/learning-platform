@@ -1,97 +1,380 @@
 {
-    "learningPaths": [
+  "learningPaths": [
+    {
+      "id": "networking-security",
+      "title": "Networking and Security",
+      "description": "Covers network fundamentals, security protocols, and related tools.",
+      "image": "assets/img/network-security.jpg",
+      "modules": [
+        {
+          "id": "network-basics",
+          "title": "Network Basics",
+          "description": "Intro to networks.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/network-basics.md"
+        },
+        {
+          "id": "tcp-ip",
+          "title": "TCP/IP Protocol Suite",
+          "description": "Understanding the core protocols of the internet.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/tcp-ip.md"
+        },
+        {
+          "id": "linux-networking",
+          "title": "Linux Networking",
+          "description": "Networking concepts specific to Linux systems.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Linux Networking.md"
+        },
+        {
+          "id": "f5",
+          "title": "F5 Load Balancing",
+          "description": "Introduction to F5 load balancing concepts.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/f5.md"
+        },
+        {
+          "id": "waf",
+          "title": "Web Application Firewall (WAF)",
+          "description": "Understanding WAFs and their role in security.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/waf.md"
+        },
+        {
+          "id": "netcat",
+          "title": "Netcat",
+          "description": "Learning Netcat for network utility.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Netcat.md"
+        },
+        {
+          "id": "nmap",
+          "title": "Nmap",
+          "description": "Network scanning and enumeration with Nmap.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Nmap.md"
+        },
+        {
+          "id": "smbclient",
+          "title": "SMBclient",
+          "description": "Using SMBclient to interact with SMB/CIFS shares.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/SMBclient.md"
+        },
+        {
+           "id": "locked-shields-2024",
+          "title": "Locked Shields 2024",
+          "description": "Introduction to Locked Shields exercise",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/locked-shields-2024.md"
+        },
+        {
+          "id": "smbmap",
+          "title": "SMBmap",
+          "description": "Enumerating SMB shares with SMBmap.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/SMBmap.md"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity-pentesting",
+      "title": "Cybersecurity and Penetration Testing",
+      "description": "Comprehensive modules on penetration testing, red/blue teaming, and digital forensics.",
+      "image": "assets/img/cybersecurity-pentesting.jpg",
+      "modules": [
+        {
+          "id": "pentest",
+          "title": "Penetration Testing",
+          "description": "Introduction to penetration testing methodologies.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/01 - Pentest.md"
+        },
+        {
+          "id": "red-team",
+          "title": "Red Teaming",
+          "description": "Offensive security and red team operations.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/02 - Red Team.md"
+        },
+        {
+          "id": "blue-team",
+          "title": "Blue Teaming",
+          "description": "Defensive security and blue team operations.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/03 - Blue Team.md"
+        },
+        {
+          "id": "active-directory",
+          "title": "Active Directory",
+          "description": "Understanding and attacking/defending Active Directory.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/04 - Active Directory.md"
+        },
+        {
+          "id": "dfir",
+          "title": "DFIR (Digital Forensics and Incident Response)",
+          "description": "Digital forensics and incident response procedures.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/DFIR.md"
+        },
+        {
+          "id": "forensics",
+          "title": "Forensics",
+          "description": "Detailed study of digital forensics.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Forensics.md"
+        },
+          {
+          "id": "malware-analysis",
+          "title": "Malware Analysis",
+          "description": "Techniques for analyzing malware.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Malware Analysis.md"
+        },
+        {
+          "id": "reverse-engineering",
+          "title": "Reverse Engineering",
+          "description": "Introduction to reverse engineering software.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Reverse Engineering.md"
+        },
+        {
+          "id": "oscp",
+          "title": "OSCP Preparation",
+          "description": "Resources and preparation for the OSCP certification.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/OSCP.md"
+        },
+        {
+          "id": "osint",
+          "title": "Open-Source Intelligence (OSINT)",
+          "description": "Fundamentals of open-source intelligence gathering.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Open-Source Intelligence (OSINT) Fundamentals.md"
+        },
+        {
+          "id": "phishing",
+          "title": "Phishing",
+          "description": "Understanding and defending against phishing attacks.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Phishing.md"
+        },
+        {
+          "id": "siem",
+          "title": "SIEM",
+          "description": "Introduction to Security Information and Event Management (SIEM) systems.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/SIEM.md"
+        },
+        {
+            "id": "cybersecurity-analyst-interview-prep",
+            "title": "Cybersecurity Analyst Interview Prep",
+            "description": "Preparing for interviews",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/Cybersecurity Analyst Interview Prep.md"
+          },
+        {
+          "id": "reconnaissance",
+          "title": "Reconnaissance",
+          "description": "Information gathering techniques in cybersecurity",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Reconnaisance.md"
+        },
+        {
+          "id": "gobuster",
+          "title": "Gobuster",
+          "description": "Directory and file busting using Gobuster",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Gobuster.md"
+        },
+        {
+          "id": "ffuf",
+          "title": "Ffuf",
+          "description": "Usage of ffuf, the Fast web fuzzer",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/ffuf.md"
+        },
+        {
+          "id": "file-upload",
+          "title": "File Upload",
+          "description": "File upload vulnerabilities",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/File Upload.md"
+         },
+         {
+          "id": "ctf-bootcamp",
+          "title": "Capture the Flag Bootcamp",
+          "description": "Training and challenges for CTF competitions",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Capture the flag bootcamp.md"
+        }
+      ]
+    },
+     {
+      "id": "linux-system-administration",
+      "title": "Linux System Administration",
+      "description": "Focuses on Linux fundamentals, system administration, and shell scripting.",
+      "image": "assets/img/linux-sysadmin.jpg",
+      "modules": [
+        {
+          "id": "linux-101",
+          "title": "Linux 101",
+          "description": "Introduction to Linux concepts and usage.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Linux 101.md"
+        },
+        {
+          "id": "basic-linux-commands",
+          "title": "Basic Linux Commands",
+          "description": "Essential Linux commands for everyday use.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Basic Linux Commands.md"
+        },
+        {
+          "id": "linux-enumeration",
+          "title": "Linux Enumeration",
+          "description": "System enumeration techniques for Linux.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Linux Enumeration.md"
+        },
+        {
+          "id": "linux-privilege-escalation",
+          "title": "Linux Privilege Escalation for Beginners",
+          "description": "Techniques for privilege escalation on Linux systems.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Linux Privilege Escalation for Beginners.md"
+        },
+        {
+          "id": "linux-shells",
+          "title": "Linux Shells",
+          "description": "Working with various Linux shells.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Linux Shells.md"
+        }
+      ]
+    },
       {
-        "id": "network-fundamentals",
-        "title": "Network Fundamentals",
-        "description": "A basic intro to networking.",
-        "image": "assets/img/network-fundamentals.jpg",
-        "modules": [
-          {
-            "id": "network-basics",
-            "title": "Network Basics",
-            "description": "Intro to networks.",
+      "id": "programming-scripting",
+      "title": "Programming and Scripting",
+      "description": "Covers programming fundamentals, Python, PowerShell, and scripting for automation.",
+      "image": "assets/img/programming-scripting.jpg",
+      "modules": [
+        {
+          "id": "programming-intro",
+          "title": "Programming Intro",
+          "description": "Intro to Programming",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/programming-intro.md"
+        },
+        {
+          "id": "python",
+          "title": "Python",
+          "description": "Intro to Python",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/python.md"
+        },
+        {
+            "id": "python-file",
+            "title": "Python File",
+            "description": "Intro to Python File",
             "contentType": "markdown",
-            "contentSrc": "data/modules/network-basics.md"
+            "contentSrc": "data/modules/Python.md"
           },
-          {
-            "id": "tcp-ip",
-            "title": "TCP/IP Protocol Suite",
-            "description": "Understanding the core protocols of the internet.",
+        {
+          "id": "powershell",
+          "title": "PowerShell",
+          "description": "Introduction to PowerShell scripting.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/PowerShell.md"
+        },
+         {
+          "id": "powershell-file",
+          "title": "PowerShell File",
+          "description": "Introduction to PowerShell scripting.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Powershell.md"
+        },
+        {
+          "id": "reverse-shells",
+          "title": "Reverse Shells",
+          "description": "Creating reverse shells in various languages (PHP, Python, PowerShell, Bash, etc.).",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Reverse Shell PHP, Python, Powershell, Bash, NC, JSP, Java, Perl.md"
+        }
+      ]
+    },
+    {
+      "id": "cryptography-hashing",
+      "title": "Cryptography and Hashing",
+      "description": "Modules on cryptographic techniques, hash generation, and cracking.",
+      "image": "assets/img/cryptography-hashing.jpg",
+      "modules": [
+        {
+          "id": "creating-hashfile",
+          "title": "Creating a Hashfile",
+          "description": "How to create hashfiles for password cracking.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Creating a Hashfile.md"
+        },
+        {
+          "id": "hashcat",
+          "title": "Hashcat",
+          "description": "Password cracking with Hashcat.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Hashcat.md"
+        },
+        {
+          "id": "identifying-hashes",
+          "title": "Identifying Hashes",
+          "description": "Techniques for identifying different hash types.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/Identifying Hashes.md"
+        },
+        {
+          "id": "john-the-ripper",
+          "title": "John the Ripper",
+          "description": "Password cracking with John the Ripper.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/John The Ripper.md"
+        },
+        {
+            "id": "generating-wordlist",
+            "title": "Generating Wordlist",
+            "description": "creating Wordlist.",
             "contentType": "markdown",
-            "contentSrc": "data/modules/tcp-ip.md"
-          },
-          {
-            "id": "f5",
-            "title": "F5 Load Balancing",
-            "description": "Introduction to F5 load balancing concepts.",
-            "contentType": "markdown",
-            "contentSrc": "data/modules/f5.md"
-          },
-          {
-            "id": "waf",
-            "title": "Web Application Firewall (WAF)",
-            "description": "Understanding WAFs and their role in security.",
-            "contentType": "markdown",
-            "contentSrc": "data/modules/waf.md"
-          },
-          {
-             "id": "locked-shields-2024",
-            "title": "Locked Shields 2024",
-            "description": "Introduction to Locked Shields exercise",
-            "contentType": "markdown",
-            "contentSrc": "data/modules/locked-shields-2024.md"
+            "contentSrc": "data/modules/Generating a Wordlist.md"
           }
-        ]
-      },
-      {
-        "id": "devops-practices",
-        "title": "DevOps Practices",
-        "description": "Learn about DevOps.",
-        "image": "assets/img/devops-practices.jpg",
-        "modules": [
-          {
-            "id": "devops-intro",
-            "title": "DevOps Intro",
-            "description": "Intro to DevOps",
-            "contentType": "markdown",
-            "contentSrc": "data/modules/devops-intro.md"
-          },
-           {
-            "id": "cheatsheets",
-            "title": "Cheatsheets",
-            "description": "Useful cheatsheets",
-            "contentType": "markdown",
-            "contentSrc": "data/modules/cheatsheets.md"
-          }
-        ]
-      },
-      {
-        "id": "programming-concepts",
-        "title": "Programming Concepts",
-        "description": "Learn about Programming.",
-        "image": "assets/img/programming-concepts.jpg",
-        "modules": [
-          {
-            "id": "programming-intro",
-            "title": "Programming Intro",
-            "description": "Intro to Programming",
-            "contentType": "markdown",
-            "contentSrc": "data/modules/programming-intro.md"
-          },
-          {
-            "id": "python",
-            "title": "Python",
-            "description": "Intro to Python",
-            "contentType": "markdown",
-            "contentSrc": "data/modules/python.md"
-          }
-        ]
-      },
-      {
-        "id": "ai-basics",
-        "title": "AI Basics",
-        "description": "Learn about AI.",
-        "image": "assets/img/ai-basics.jpg",
+      ]
+    },
+    {
+      "id": "cloud-devops",
+      "title": "Cloud and DevOps",
+      "description": "Covers cloud architecture, DevOps practices, and related technologies.",
+      "image": "assets/img/cloud-devops.jpg",
+      "modules": [
+        {
+          "id": "devops-intro",
+          "title": "DevOps Intro",
+          "description": "Intro to DevOps",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/devops-intro.md"
+        },
+        {
+          "id": "ca",
+          "title": "Cloud Architect",
+          "description": "Introduction to being a Cloud Architect",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/ca.md"
+        }
+      ]
+    },
+    {
+       "id": "ai-ml",
+        "title": "AI and Machine Learning",
+        "description": "Fundamentals of AI, machine learning, and related frameworks.",
+        "image": "assets/img/ai-ml.jpg",
         "modules": [
           {
             "id": "ai-intro",
@@ -107,21 +390,92 @@
             "contentType": "markdown",
             "contentSrc": "data/modules/LangChain.md"
           },
-          {
-            "id": "ca",
-            "title": "Cloud Architect",
-            "description": "Introduction to being a Cloud Architect",
+            {
+            "id": "langchain-file",
+            "title": "LangChain file",
+            "description": "Intro to LangChain File",
             "contentType": "markdown",
-            "contentSrc": "data/modules/ca.md"
+            "contentSrc": "data/modules/Langchain.md"
+          }
+        ]
+    },
+    {
+      "id": "cheatsheets-resources",
+      "title": "Cheatsheets and Resources",
+      "description": "Collection of cheatsheets and resources for various topics.",
+      "image": "assets/img/cheatsheets-resources.jpg",
+      "modules": [
+        {
+          "id": "cheatsheets",
+          "title": "Cheatsheets",
+          "description": "Useful cheatsheets",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/cheatsheets.md"
+        },
+        {
+            "id": "cheatsheet-ad",
+            "title": "Cheatsheet AD",
+            "description": "Useful Active Directory cheatsheets",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/cheatsheet-AD.md"
+        },
+         {
+            "id": "cheatsheet-nta",
+            "title": "Cheatsheet NTA",
+            "description": "Useful Network Traffic Analysis cheatsheets",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/cheatsheet-NTA.md"
+        },
+         {
+            "id": "cheatsheet-linux",
+            "title": "Cheatsheet Linux",
+            "description": "Useful Linux cheatsheets",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/cheatsheet-linux.md"
+        },
+        {
+          "id": "cheatsheet-metasploit",
+          "title": "Cheatsheet Metasploit",
+          "description": "Metasploit framework cheatsheet.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/cheatsheet-metasploit.md"
+        },
+        {
+            "id": "fundamental-skills",
+            "title": "Fundamental skills",
+            "description": "Metasploit framework cheatsheet.",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/Fundamental Skills.md"
           },
-          {
-            "id": "motivational-books",
+        {
+          "id": "freecodecamp",
+          "title": "FreeCodeCamp",
+          "description": "Resources from FreeCodeCamp.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/FreeCodeCamp.md"
+        },
+        {
+           "id": "linkedin-learning",
+            "title": "Linkedin Learning",
+            "description": "Resources from Linkedin.",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/Linkedin Learning.md"
+        },
+           {
+           "id": "motivational-books",
             "title": "Motivational Books",
             "description": "List of Motivational Books",
             "contentType": "markdown",
             "contentSrc": "data/modules/motivational-books.md"
+          },
+           {
+            "id": "image-processing",
+            "title": "Image Processing",
+            "description": "Image Processing Introduction",
+            "contentType": "markdown",
+            "contentSrc": "data/modules/Image Processing.md"
           }
-        ]
-      }
-    ]
-  }
+      ]
+    }
+  ]
+}
