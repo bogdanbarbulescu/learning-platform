@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const md = window.markdownit(); // Initialize markdown-it
-    hljs.highlightAll(); // Initialize highlight.js
 
     fetch('data/content.json')
         .then(response => {
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 moduleContentDiv.innerHTML = `<h3>${module.title}</h3>`;
 
                 if (module.contentType === 'markdown') {
-                    loadingIndicator.style.display = 'block';
+                    loadingIndicator.style.display = 'flex'; // Show and style the indicator
                     fetch(module.contentSrc)
                         .then(response => {
                             if (!response.ok) {
@@ -33,19 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         .then(markdownText => {
                             const htmlContent = md.render(markdownText);
                             moduleContentDiv.innerHTML += htmlContent;
+                            hljs.highlightAll(); // Initialize highlight.js AFTER rendering Markdown
+
                         })
                         .catch(error => {
                             console.error('Error fetching or rendering Markdown:', error);
                             moduleContentDiv.innerHTML += `<p>Error loading content for ${module.title}.</p>`;
                         })
                         .finally(() => {
-                            loadingIndicator.style.display = 'none';
+                            loadingIndicator.style.display = 'none'; // Hide the indicator
                         });
                 } else if (module.contentType === 'html') {
                     //  This should no longer happen, but it's good to have it for safety.
                     moduleContentDiv.innerHTML += module.contentSrc;
                 }
             }
+
 
             // --- Populate Sidenav with MODULES ---
             function populateSidenav(learningPaths) {
