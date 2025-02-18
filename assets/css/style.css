@@ -1,4 +1,4 @@
-/* --- Base Styles (Mobile First) --- */
+/* --- Base Styles --- */
 
 body {
     background-color: #1A2634;
@@ -25,7 +25,14 @@ body {
     padding: 10px 15px;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
-    word-wrap: break-word;
+    word-wrap: break-word; /* For long links in the sidebar */
+}
+
+/* Responsive adjustments for VERY long words in links */
+@media (max-width: 575.98px) {
+   .nav-link {
+      font-size: 0.9rem;
+   }
 }
 
 .nav-link svg {
@@ -62,6 +69,9 @@ body {
     background-color: #1A2634;
     border-radius: 8px;
     text-align: center;
+    overflow-wrap: break-word; /*  Fix for long URLs - BEST OPTION */
+    /*  OR: word-break: break-word;  (equivalent) */
+    /*  Do NOT use: hyphens: auto;  (for URLs) */
 }
 
 /* Main Content Centering */
@@ -78,6 +88,20 @@ body {
 .feature-cards-container {
     display: flex;
     justify-content: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    #module-content {
+        padding: 15px;
+    }
+    .module-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .offcanvas {
+        width: 75%;
+    }
 }
 
 /* --- Loading Indicator --- */
@@ -164,74 +188,53 @@ body {
 /* Responsive Code Blocks */
 pre {
     overflow-x: auto;
-    word-wrap: break-word;
+    word-wrap: break-word; /* Keep this for code blocks */
     white-space: pre-wrap;
 }
 
 /* --- Media Queries --- */
 
 /* Small devices (phones, <576px) */
-/*  (No specific styles needed here, as base styles apply) */
+/*  (No specific styles needed here, base styles apply) */
 
-/* Small devices (phones, <768px) - Bootstrap's "sm" breakpoint */
+/* Small devices (phones, <768px) */
 @media (max-width: 767.98px) {
-      #module-content {
-        padding: 15px;
-    }
-    .module-nav {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .offcanvas {
-        width: 75%;
-    }
-    /* Responsive adjustments for VERY long words */
-    .nav-link {
-      font-size: 0.9rem;
-   }
+    /*  (Existing styles) */
 }
 
-/* Medium devices (tablets, 768px and up) - Bootstrap's "md" breakpoint */
+/* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    /* styles for browsers larger than 768px; */
-    /*  (Potentially add styles here if needed) */
+    /*  (Potentially add styles here) */
 }
 
-/* Large devices (desktops, 992px and up) - Bootstrap's "lg" breakpoint */
+/* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    /* styles for browsers larger than 992px; */
-     /*  (Potentially add styles here if needed) */
+    /*  (Potentially add styles here) */
 }
 
-/* Extra large devices (large desktops, 1200px and up) - Bootstrap's "xl" breakpoint */
+/* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    /* styles for browsers larger than 1200px */
-    /*  (Potentially add styles here if needed) */
+    /*  (Potentially add styles here) */
 }
 
-/* Extra extra large devices (large desktops, 1400px and up) - Bootstrap's "xxl" breakpoint */
- @media only screen and (min-width: 1400px) {
-    /* styles for browsers larger than 1400px; */
-     /*  (Potentially add styles here if needed) */
-
+/* Extra extra large devices (large desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {
+     /*  (Potentially add styles here) */
 }
+
 /* Extra, extra, extra large devices (large desktops, 2000px and up) */
 @media only screen and (min-width: 2000px) {
-        /* for sumo sized (mac) screens */
+    /*  (Potentially add styles here) */
 }
 
 /* --- Device-Specific Media Queries (Use with Caution!) --- */
 
-/*  These are less reliable than width-based queries. */
-
 @media only screen and (max-device-width: 480px) {
-    /* styles for mobile browsers smaller than 480px; (iPhone) */
-    /* (Consider if you *really* need this, as width-based queries are better) */
+    /*  (Consider if you *really* need this) */
 }
 
 @media only screen and (device-width: 768px) {
-    /* default iPad screens */
-    /* (Consider if you *really* need this) */
+    /*  (Consider if you *really* need this) */
 }
 
 /* Portrait and Landscape for iPad (and similar tablets) */
