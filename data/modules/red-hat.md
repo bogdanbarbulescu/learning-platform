@@ -1,33 +1,7 @@
-![screenshot](https://github.com/bogdanbarbulescu/Notes/blob/main/img/a7ede7be-3266732966.png)
-
-
-
 # Red Hat Cheatsheet
 
 This GitHub repository contains a collection of essential commands and tips for working with Red Hat Enterprise Linux (RHEL). Whether you're a system administrator, developer, or just getting started with Red Hat, this cheatsheet provides a handy reference to help you manage and troubleshoot your Red Hat systems effectively.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Red Hat Overview](#red-hat-overview)
-- [Manage Files from the Command Line](#manage-files-from-the-command-line)
-- [Manual Pages](#manual-pages)
-- [Create, View, and Edit Text Files](#Vim)
-- [Manage Local Users and Groups]
-- [Linux File-system Permissions](#linux-file-system-permissions)
-- [Monitor and Manage Linux Processes]
-- [Control Services and Daemons]
-- [Configure and Secure SSH]
-- [Manage Networking](#networking-commands)
-- [Install and Update Software Packages](#package-management-commands)
-- [Access Linux File Systems]
-- [User Management Commands](#user-management-commands)
-- [Password Management Commands](#password-management-commands)
-- [Permission Commands](#permission-commands)
-- [Default File Permissions](#default-file-permissions)
-- [Process Management Commands](#process-management-commands)
-- [Service Management Commands](#service-management-commands)
-- [Usage](#usage)
 
 
 ## Introduction
@@ -38,13 +12,12 @@ Red Hat Enterprise Linux (RHEL) is a popular open-source operating system design
 
 Red Hat Enterprise Linux is a robust, scalable, and secure operating system built for modern enterprises. It offers a wide range of features including high availability, security enhancements, containerization support, and extensive documentation. RHEL is the foundation for many enterprise-grade applications and services, making it a critical component in various IT infrastructures.
 
-![screenshot](https://github.com/bogdanbarbulescu/Notes/blob/main/img/RHEL-ecosystem.png)
 
 
 ## Manage Files from the Command Line
 
 ### The File-system Hierarchy
-![screenshot](https://github.com/bogdanbarbulescu/Notes/blob/main/img/file-system-directories.png)
+
 
 | Location | Purpose |
 |----------|---------|
