@@ -237,7 +237,7 @@
           "title": "Red Hat Cheatsheet",
           "description": "Essential commands.",
           "contentType": "markdown",
-          "contentSrc": "data/modules/red-heat.md"
+          "contentSrc": "data/modules/red-hat.md"
         },
         {
           "id": "linux-enumeration",
