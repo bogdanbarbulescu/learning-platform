@@ -233,6 +233,13 @@
           "contentSrc": "data/modules/Basic Linux Commands.md"
         },
         {
+          "id": "red-hat",
+          "title": "Red Hat Cheatsheet",
+          "description": "Essential commands.",
+          "contentType": "markdown",
+          "contentSrc": "data/modules/red-heat.md"
+        },
+        {
           "id": "linux-enumeration",
           "title": "Linux Enumeration",
           "description": "System enumeration techniques for Linux.",
